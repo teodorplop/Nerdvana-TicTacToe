@@ -7,7 +7,6 @@ public class Cell : MonoBehaviour
     TMP_Text winText;
 
     static int counter;
-    static int winner;
     static int[] cells = new int[9];
 
     private void Start()
@@ -25,12 +24,12 @@ public class Cell : MonoBehaviour
         if (counter % 2 == 1)
         {
             textComponent.text = "X";
-            cells[int.Parse(name)] = 1;
+            cells[name[0] - '0'] = 1;
         }
         else
         {
             textComponent.text = "0";
-            cells[int.Parse(name)] = 2;
+            cells[name[0] - '0'] = 2;
         }
 
         if (CheckWin())
