@@ -6,8 +6,10 @@ public class Cell : MonoBehaviour
     TMP_Text textComponent;
     TMP_Text winText;
 
-    static int counter;
-    static int[] cells = new int[9];
+    public static int counter;
+    public static int[] cells = new int[9];
+
+    public static Cell lastCell;
 
     private void Start()
     {
@@ -19,6 +21,8 @@ public class Cell : MonoBehaviour
     {
         if (textComponent.text != "" || winText.text != "")
             return;
+
+        lastCell = this;
 
         ++counter;
         if (counter % 2 == 1)
