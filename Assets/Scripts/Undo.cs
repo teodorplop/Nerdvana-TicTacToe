@@ -8,7 +8,7 @@ public class Undo : MonoBehaviour
 {
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.U) && Cell.lastCell != null)
+        if (Input.GetKeyDown(KeyCode.U))
         {
             PerformUndo();
         }
